@@ -130,7 +130,8 @@ def send_help(message: Message):
         "The bot will search for matches in public data leaks. You can navigate the results using the `<<` and `>>` buttons and delete the report with the `🗑️` button."
     )
     bot.reply_to(message, help_text, parse_mode="html")
-    
+
+
     
 @bot.message_handler(content_types=['audio', 'photo', 'voice', 'video', 'document', 'location', 'contact', 'sticker'])
 def handle_non_text(message: Message):
