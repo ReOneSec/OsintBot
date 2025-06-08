@@ -119,18 +119,21 @@ def send_welcome(message: Message):
     bot.reply_to(message, "Hi! I'm a bot for searching public databases. For more info on how to use me, send /help.")
 
 @bot.message_handler(commands=["help"])
+
+@bot.message_handler(commands=["help"])
 def send_help(message: Message):
     """Handles the /help command with detailed instructions."""
+    # This text is now plain text, with no HTML tags.
     help_text = (
-        "<b>How to use this bot:</b>\n\n"
+        "How to use this bot:\n\n"
         "Simply send me a query to search for, such as:\n"
-        "- An email address (<code>example@gmail.com</code>)\n"
-        "- A phone number (<code>1234567890</code>)\n"
-        "- A username (<code>example_user</code>)\n\n"
-        "The bot will search for matches in public data leaks. You can navigate the results using the `<<` and `>>` buttons and delete the report with the `🗑️` button."
+        "- An email address (example@gmail.com)\n"
+        "- A phone number (1234567890)\n"
+        "- A username (example_user)\n\n"
+        "The bot will search for matches in public data leaks. You can navigate the results using the << and >> buttons and delete the report with the 🗑️ button."
     )
-    bot.reply_to(message, help_text, parse_mode="html")
-
+    # We have removed the parse_mode="html" argument.
+    bot.reply_to(message, help_text)
 
     
 @bot.message_handler(content_types=['audio', 'photo', 'voice', 'video', 'document', 'location', 'contact', 'sticker'])
