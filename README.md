@@ -1,4 +1,3 @@
-```markdown
 # LeakOsint Telegram Bot
 
 A powerful, robust Python-based Telegram bot that acts as a front-end for the LeakOsint API. It allows users to query for information in data leaks directly from their Telegram client, with results presented in a clean, interactive, and paginated format.
@@ -21,7 +20,6 @@ A powerful, robust Python-based Telegram bot that acts as a front-end for the Le
 ⏳ *Searching, please wait...* (deleted after result)  
 
 **Result format**:  
-```
 ---
 [ Photo ] [ Video ]
 **breach_database_1**
